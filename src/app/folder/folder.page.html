@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card >
+  <ion-card-header>
+    <ion-card-subtitle>Puanmatik</ion-card-subtitle>
+    <ion-card-title>YKS Hesapla</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Lütfen sizden istenilen bilgileri aşağıdaki alanlara giriniz.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-range min="0" max="40" color="secondary" [(ngModel)]="mat" (ngModelChange)="hesapla()">
+      <ion-label slot="start">Mat</ion-label>
+      <ion-label slot="end">{{mat}}net</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-range min="0" max="40" color="secondary" [(ngModel)]="fen" (ngModelChange)="hesapla()">
+      <ion-label slot="start">Fen</ion-label>
+      <ion-label slot="end">{{fen}}net</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-range min="0" max="40" color="secondary" [(ngModel)]="tur" (ngModelChange)="hesapla()">
+      <ion-label slot="start">Tur</ion-label>
+      <ion-label slot="end">{tur}net</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-range min="0" max="40" color="secondary" [(ngModel)]="sos" (ngModelChange)="hesapla()">
+      <ion-label slot="start">Sos</ion-label>
+      <ion-label slot="end">{{sos}}net</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>YKS</ion-card-subtitle>
+      <ion-card-title>{{sonuc}}PUAN</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+
+</ion-content>
